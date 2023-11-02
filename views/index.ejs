@@ -1,1 +1,27 @@
-Famin's Website
+<div class="container">
+  <h1 id="display">0</h1>
+  <div class="btn">
+    <button id="decrease">decrease</button>
+    <button id="reset">reset</button>
+    <button id="increase">increase</button>
+  </div>
+</div>
+
+<script>
+  let count = 0;
+
+  document.getElementById('decrease').onclick = () => {
+    count -= 1;
+    document.getElementById('display').innerText = count;
+  };
+
+  document.getElementById('reset').onclick = () => {
+    count = 0;
+    document.getElementById('display').innerText = count;
+  };
+
+  document.getElementById('increase').onclick = () => {
+    count += 1;
+    document.getElementById('display').innerText = count;
+  };
+</script>

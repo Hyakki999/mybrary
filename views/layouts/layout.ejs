@@ -4,8 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mybrary</title>
+    <style>
+      .container {
+        width: 900px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      h1 {
+        font-size: 100px;
+      }
+
+      .btn {
+        width: 400px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      button {
+        font-size: 30px;
+      }
+    </style>
   </head>
   <body>
-    <h1><%- body %></h1>
+    <%- include('../partials/header.ejs') %><%- body %>
   </body>
 </html>
