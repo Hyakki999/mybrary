@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mybrary</title>
     <style>
-      .container {
-        width: 900px;
+      .containerA {
+        width: 800px;
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -24,6 +24,59 @@
 
       button {
         font-size: 30px;
+      }
+
+      .containerB {
+        width: 800px;
+        display: flex;
+      }
+
+      .cardA {
+        background-color: #e58585;
+      }
+
+      .cardB {
+        background-color: #d7bc92;
+      }
+
+      .cardC {
+        background-color: #d9e0a4;
+      }
+
+      .cardD {
+        background-color: #a9d39c;
+      }
+
+      .cardE {
+        background-color: #9ae3d7;
+      }
+
+      .cardF {
+        background-color: #8f9ecd;
+      }
+
+      .panel {
+        height: 400px;
+        background-size: cover;
+        flex: 0.5;
+        border-radius: 50px;
+        margin: 10px;
+        cursor: pointer;
+        -webkit-transition: all 600ms ease-in;
+      }
+
+      .active {
+        flex: 5;
+      }
+
+      @media only screen and (max-width: 960px) {
+        .containerB {
+          width: 400px;
+        }
+
+        .panel {
+          height: 200px;
+        }
       }
     </style>
   </head>

@@ -1,0 +1,47 @@
+<div class="containerA">
+  <h1 id="display">0</h1>
+  <div class="btn">
+    <button id="decrease">decrease</button>
+    <button id="reset">reset</button>
+    <button id="increase">increase</button>
+  </div>
+</div>
+
+<div class="containerB">
+  <div class="cardA panel active"></div>
+  <div class="cardB panel"></div>
+  <div class="cardC panel"></div>
+  <div class="cardD panel"></div>
+  <div class="cardE panel"></div>
+  <div class="cardF panel"></div>
+</div>
+
+<script>
+  let count = 0;
+
+  document.getElementById('decrease').onclick = () => {
+    count -= 1;
+    document.getElementById('display').innerText = count;
+  };
+
+  document.getElementById('reset').onclick = () => {
+    count = 0;
+    document.getElementById('display').innerText = count;
+  };
+
+  document.getElementById('increase').onclick = () => {
+    count += 1;
+    document.getElementById('display').innerText = count;
+  };
+
+  const panels = document.querySelectorAll('.panel');
+
+  panels.forEach((panel) => {
+    panel.addEventListener('click', () => {
+      panels.forEach((panel) => {
+        panel.classList.remove('active');
+      });
+      panel.classList.add('active');
+    });
+  });
+</script>
