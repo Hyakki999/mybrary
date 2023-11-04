@@ -65,7 +65,7 @@
         border-radius: 50px;
         margin: 10px;
         cursor: pointer;
-        -webkit-transition: all 600ms ease-in;
+        transition: all 600ms ease-in;
       }
 
       .active {
@@ -85,6 +85,7 @@
     </style>
   </head>
   <body>
-    <%- include('../partials/header.ejs') %><%- body %>
+    <%- include('../partials/header.ejs') %>
+    <%- include('../partials/errorMessage.ejs') %> <%- body %>
   </body>
 </html>
